@@ -20,7 +20,7 @@
 	</p>
 	
 	<p>
-		<a href="<s:url action='save'/>">Ejecutar el action (utn.frd.action.PersonaAction -> metodo save)</a>
+		<a href="<s:url action='personas'/>">Ejecutar el action (utn.frd.action.PersonaAction -> metodo execute)</a>
 		Esta regla está definida en el archivo struts.xml
 	</p>
 </body>

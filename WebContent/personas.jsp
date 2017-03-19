@@ -19,5 +19,21 @@
 <s:actionerror/>
 </s:form>
 
+<table>
+	<tr>
+		<th>ID</th>
+		<th>NOMBRE</th>
+		<th>EDAD</th>
+		<th>GENERO</th>
+	</tr>
+	<s:iterator value="personas" var="p">
+		<tr>
+			<td><s:property value="#p.id"/></td>
+			<td><s:property value="#p.name"/></td>
+			<td><s:property value="#p.age"/></td>
+			<td><s:property value="#p.gender"/></td>
+		</tr>
+	</s:iterator>
+</table>
 </body>
 </html>
