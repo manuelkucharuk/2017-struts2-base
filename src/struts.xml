@@ -17,6 +17,11 @@
       <result name="success">/HelloWorld.jsp</result>
     </action>
    
+   	<action name="save" class="utn.frd.action.PersonaAction" method="save">
+		<result name="error">/personas.jsp</result>
+   		<result name="success">/personas.jsp</result>
+	</action>
+    
     </package>
  
 </struts>

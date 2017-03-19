@@ -18,5 +18,10 @@
 		<a href="<s:url action='hello'/>">Ejecutar el action (utn.frd.action.HelloWorldAction -> metodo execute)</a>
 		Esta regla está definida en el archivo struts.xml
 	</p>
+	
+	<p>
+		<a href="<s:url action='save'/>">Ejecutar el action (utn.frd.action.PersonaAction -> metodo save)</a>
+		Esta regla está definida en el archivo struts.xml
+	</p>
 </body>
 </html>
