@@ -14,13 +14,7 @@
 	<!-- Aca empieza lo que se va a mostrar en la pagina -->
 	<h1>Welcome To Struts 2!</h1>
 	<p>
-		<!-- este es un link al action "hello" que está definido en el struts.xml -->
-		<a href="<s:url action='hello'/>">Ejecutar el action (utn.frd.action.HelloWorldAction -> metodo execute)</a>
-		Esta regla está definida en el archivo struts.xml
-	</p>
-	
-	<p>
-		<a href="<s:url action='personas'/>">Ejecutar el action (utn.frd.action.PersonaAction -> metodo execute)</a>
+		<a href="<s:url action='personas'/>">Ejecutar el action</a>
 		Esta regla está definida en el archivo struts.xml
 	</p>
 </body>

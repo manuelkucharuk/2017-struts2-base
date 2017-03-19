@@ -5,17 +5,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Personas</title>
 </head>
 <body>
 
 <s:form action="save">
+	<s:hidden name="id"></s:hidden>
 	<s:textfield label="Nombre" name="name"></s:textfield>
 	<s:textfield label="Edad" name="age"></s:textfield>
 	<s:radio label="Genero" name="gender"
 		list="#{'Femenino':'Femenino','Masculino':'Masculino'}" />
-	
-	<s:submit></s:submit>
+	<s:submit label="Guardar"></s:submit>
 <s:actionerror/>
 </s:form>
 
@@ -25,6 +25,7 @@
 		<th>NOMBRE</th>
 		<th>EDAD</th>
 		<th>GENERO</th>
+		<th></th>
 	</tr>
 	<s:iterator value="personas" var="p">
 		<tr>
@@ -32,6 +33,18 @@
 			<td><s:property value="#p.name"/></td>
 			<td><s:property value="#p.age"/></td>
 			<td><s:property value="#p.gender"/></td>
+			<td>
+				<s:url id="deleteURL" action="delete">
+					<s:param name="id" value="#p.id"></s:param>
+				</s:url>
+				<s:a href="%{deleteURL}">Borrar</s:a>
+			</td>
+			<td>
+				<s:url id="modifyURL" action="modify">
+					<s:param name="id" value="#p.id"></s:param>
+				</s:url>
+				<s:a href="%{modifyURL}">Modificar</s:a>
+			</td>
 		</tr>
 	</s:iterator>
 </table>

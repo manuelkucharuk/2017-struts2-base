@@ -1,12 +1,7 @@
 package utn.frd.bean;
 
-import java.util.List;
-import db.PersistentManager;
-
-
-
 public class Persona {
-	
+	private static long idUnico=0;
 	private long id;
 	private String name;
 	private int age;
@@ -14,16 +9,14 @@ public class Persona {
 	
 	//Constructor, crea una persona con sus atributos
 	public Persona(String name, int age, String gender) {
+		this.id = getIdUnico();
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
 	}
 	
-	//Constructor, pone a una persona en la lista de personas
-	public Persona(int posicion, String name, int age, String gender){
-		Persona persona = new Persona(name,age,gender);
-		List<Persona> personas = db.PersistentManager.getInstance();
-		personas.add(posicion,persona);
+	private long getIdUnico(){		
+		return idUnico++;
 	}
 	
 	public long getId() {
